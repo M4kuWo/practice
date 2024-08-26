@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9; /* Above everything except logo */
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off the screen */
+    width: 400px; /* Adjust width as needed */
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure it's above other content */
+    transition: right 0.35s ease; /* Smooth slide-in effect */
+    padding: 20px;
+}
+
+.cartPanel_title {
+    margin-top: 20px; 
+    padding: 19px;
+    background-color: #c1e100;
+    width: calc(100% + 40px); /* Adjust to account for padding */
+    margin-left: -20px; /* Shift left to cover the padding */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: center;
+}
+
+
+.cart-panel h2 {
+    color: #393939;
+    font-weight: bold;
+    /* font-size:larger; */
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Active class to show the panel */
+.cart-panel.active {
+    right: 0;
+}
+
+
+.green-div {
+    margin-top: 40px;
+    background-color: rgb(70, 167, 86);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: -78.6px;
+    left: 20px;
+    z-index: 10; 
+}
+
+.logo img {
+    max-width: 250px; 
+    height: auto; /* Maintain aspect ratio */
+}
+
+.green-div button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.green-div button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.cart {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cart button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.cart button .cart-icon {
+    font-size: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 50%;
+    max-width: 400px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    margin-left: 5px;
+    background-color: rgb(70, 167, 86);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: orange;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.displayClass button {
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    margin-left: 5px;
+    background-color: rgb(70, 167, 86);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.displayClass button:hover {
+    background-color: orange;
+}
+
+.background-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-color: #fff; 
+}
+
+.background-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Background.jpg');
+    background-size: cover; 
+    background-position: center;
+    opacity: 0.08; 
+    z-index: 1;
+}
+
+.background-image-container .content {
+    position: relative;
+    z-index: 2; 
+}
+
+.card {
+    width: 400px;
+    margin: 10px;
+}
+
+.card-img-top {
+    width: 100% ;
+    height: 200px ; 
+    object-fit:scale-down ;
+}
+
+.card-group {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quantity-selector {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quantity-selector input[type=number] {
+    width: 50px;
+    height: 44px;
+    text-align: center;
+}
+
+/* CSS to remove the arrows in the quantity selector */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* For Firefox */
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#display {
+    padding-top: 235px; /* The space between the top of the screen and the display div */
+}
+

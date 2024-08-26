@@ -1,0 +1,184 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Chicken Breast",
+            "description": "Boneless, skinless chicken breast, perfect for grilling.",
+            "category": "Meat",
+            "subcategory": "Poultry",
+            "price": 5.99,
+            "image": "images/chicken_breast.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Ground Beef",
+            "description": "Fresh ground beef, ideal for burgers and meatloaf.",
+            "category": "Meat",
+            "subcategory": "Beef",
+            "price": 7.49,
+            "image": "images/ground_beef_1.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Pork Chops",
+            "description": "Juicy pork chops with a tender texture.",
+            "category": "Meat",
+            "subcategory": "Pork",
+            "price": 6.29,
+            "image": "images/pork_chops.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Turkey Breast",
+            "description": "Lean turkey breast, great for a healthy meal.",
+            "category": "Meat",
+            "subcategory": "Poultry",
+            "price": 8.99,
+            "image": "images/turkey_breast_2.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Lamb Chops",
+            "description": "Succulent lamb chops with a rich flavor.",
+            "category": "Meat",
+            "subcategory": "Lamb",
+            "price": 12.49,
+            "image": "images/lamb_chops.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Cheddar Cheese",
+            "description": "Sharp cheddar cheese, aged to perfection.",
+            "category": "Dairy",
+            "subcategory": "Cheese",
+            "price": 4.79,
+            "image": "images/cheddar_cheese.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Whole Milk",
+            "description": "Fresh whole milk, rich in calcium.",
+            "category": "Dairy",
+            "subcategory": "Milk",
+            "price": 3.29,
+            "image": "images/whole_milk.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Greek Yogurt",
+            "description": "Creamy Greek yogurt with a tangy flavor.",
+            "category": "Dairy",
+            "subcategory": "Yogurt",
+            "price": 2.99,
+            "image": "images/greek_yogurt.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Butter",
+            "description": "Creamy butter made from fresh cream.",
+            "category": "Dairy",
+            "subcategory": "Butter",
+            "price": 2.49,
+            "image": "images/butter.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Cottage Cheese",
+            "description": "Low-fat cottage cheese, perfect for a healthy snack.",
+            "category": "Dairy",
+            "subcategory": "Cheese",
+            "price": 3.19,
+            "image": "images/cottage_cheese.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Apple",
+            "description": "Crisp and juicy red apples, great for snacking.",
+            "category": "Fruit",
+            "subcategory": "Pome",
+            "price": 0.89,
+            "image": "images/apple.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Banana",
+            "description": "Sweet and ripe bananas, packed with potassium.",
+            "category": "Fruit",
+            "subcategory": "Berry",
+            "price": 0.59,
+            "image": "images/banana.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Strawberry",
+            "description": "Fresh strawberries, perfect for desserts.",
+            "category": "Fruit",
+            "subcategory": "Berry",
+            "price": 2.99,
+            "image": "images/strawberry.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Orange",
+            "description": "Juicy oranges, packed with vitamin C.",
+            "category": "Fruit",
+            "subcategory": "Citrus",
+            "price": 0.79,
+            "image": "images/orange.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Grapes",
+            "description": "Fresh green grapes, perfect for snacking.",
+            "category": "Fruit",
+            "subcategory": "Berry",
+            "price": 2.49,
+            "image": "images/grapes.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Orange Juice",
+            "description": "Freshly squeezed orange juice, rich in vitamin C.",
+            "category": "Beverages",
+            "subcategory": "Juice",
+            "price": 3.99,
+            "image": "images/orange_juice.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Milkshake",
+            "description": "Creamy chocolate milkshake, a delicious treat.",
+            "category": "Beverages",
+            "subcategory": "Milk-based",
+            "price": 4.49,
+            "image": "images/milkshake.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Coffee",
+            "description": "Freshly brewed coffee, perfect for your morning.",
+            "category": "Beverages",
+            "subcategory": "Hot Drinks",
+            "price": 2.49,
+            "image": "images/coffee.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Lemonade",
+            "description": "Refreshing lemonade made with fresh lemons.",
+            "category": "Beverages",
+            "subcategory": "Juice",
+            "price": 2.99,
+            "image": "images/lemonade.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Sparkling Water",
+            "description": "Crisp and refreshing sparkling water with a hint of lemon.",
+            "category": "Beverages",
+            "subcategory": "Water",
+            "price": 1.49,
+            "image": "images/sparkling_water.jpg"
+        }
+    ]
+}

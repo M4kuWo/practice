@@ -1,0 +1,54 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Michael Brown",
+      "email": "michaelbrown@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com"
+    },
+    {
+      "id": "5",
+      "name": "David Lee",
+      "email": "davidlee@example.com"
+    },
+    {
+      "id": "6",
+      "name": "Sarah Wilson",
+      "email": "sarahwilson@example.com"
+    },
+    {
+      "id": "7",
+      "name": "Chris Davis",
+      "email": "chrisdavis@example.com"
+    },
+    {
+      "id": "8",
+      "name": "Laura Martinez",
+      "email": "lauramartinez@example.com"
+    },
+    {
+      "id": "9",
+      "name": "James Garcia",
+      "email": "jamesgarcia@example.com"
+    },
+    {
+      "id": "10",
+      "name": "Emma Hernandez",
+      "email": "emmahernandez@example.com"
+    }
+  ]
+}

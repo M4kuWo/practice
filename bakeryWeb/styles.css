@@ -1,0 +1,244 @@
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Clean, readable font for body text */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Background color */
+    color: #000000; /* Main text color */
+}
+
+/* Navbar styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align navbar to the left of the screen */
+    width: 100%;
+    background-color: #f8c9c9; /* Navbar background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    z-index: 1000;
+    box-shadow: 0 0px 0px rgba(72, 182, 233, 0.1);
+    padding: 0 20px; /* Padding for alignment */
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+    justify-content: space-between; /* Space between logo, links, and social media icons */
+}
+
+/* Bottom border styles */
+#bottom-border {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px; /* Adjust height as needed */
+    background-color: #f8c9c9; /* Same color as the navbar */
+    z-index: 999; /* Ensure it stays on top of other elements */
+}
+
+/* Logo styles */
+#logo {
+    height: 230px; /* Adjust height to fit the navbar */
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 20px; /* Space between logo and navigation links */
+    align-self: center; /* Center the logo vertically within the navbar */
+}
+
+/* Navigation links styles */
+#nav-links {
+    display: flex; /* Align navigation links horizontally */
+    gap: 15px; /* Add gap between links */
+}
+
+#navbar a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    padding: 40px;
+    display: block;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive; /* Handwritten font for navbar links */
+}
+
+#navbar a:hover {
+    background-color: #dfa6bb; /* Hover effect for navbar links */
+}
+
+/* Social media icons styles */
+#social-media {
+    display: flex;
+    gap: 15px; /* Space between social media icons */
+    margin-right: 30px; /* Space between icons and edge of the navbar */
+}
+
+#social-media a {
+    display: block;
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+}
+
+#social-media img {
+    width: 100%; /* Ensure icons fit within their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Section styles */
+section {
+    padding: 20px; /* Adjusted padding for sections */
+    margin-top: 100px; /* Margin to avoid overlap with fixed navbar */
+    background-color: white; /* Section background color */
+    border-bottom: 1px solid #a4a9ad; /* Light border color */
+}
+
+/* Heading styles */
+h1, h2 {
+    font-family: 'Dancing Script', cursive; /* Handwritten font for headings */
+    color: #23001e; /* Header color */
+    text-align: center; /* Centering the title */
+}
+
+h1 {
+    font-size: 2.7em;
+    margin: 0 40 0px; /* Increased bottom margin for space between title and content */
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0 0 30px; /* Increased bottom margin for space between sub-title and content */
+}
+
+/* Paragraph styles */
+p {
+    font-family: 'Open Sans', sans-serif; /* Clean font for paragraphs */
+    line-height: 1.6;
+    margin: 0 0 20px; /* Margin below paragraphs */
+    text-align: center; /* Center-aligning the text */
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 15px; /* Space between items */
+    justify-content: center; /* Center the gallery items */
+}
+
+.gallery-item {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 10px; /* Space between items */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensures the image takes up the full width of its container */
+    height: 100%; /* Ensures the image takes up the full height of its container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .description {
+    opacity: 1; /* Show the description */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Link styles */
+a {
+    color: #20a39e; /* Link color */
+}
+
+a:hover {
+    color: #a76ae0; /* Link hover color */
+}
+
+/* Button styles */
+button {
+    background-color: #20a39e; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff; /* Button hover color */
+    color: #20a39e; /* Text color on hover */
+}
+
+/* Contact Form styles */
+#contact {
+    padding: 20px;
+    margin-top: 100px; /* Margin to avoid overlap with fixed navbar */
+    background-color: white; /* Background color for contact section */
+}
+
+form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Dancing Script', cursive; /* Handwritten font for labels */
+    color: #23001e; /* Label color */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+input[type="text"], input[type="email"], textarea {
+    font-family: 'Open Sans', sans-serif; /* Clean font for input fields */
+    padding: 10px;
+    border: 1px solid #a4a9ad; /* Border color for input fields */
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button {
+    background-color: #20a39e; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: #ffffff; /* Button hover color */
+    color: #20a39e; /* Text color on hover */
+}

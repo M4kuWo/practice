@@ -1,0 +1,403 @@
+[
+    {
+      "id": 1,
+      "Name": "African Elephant",
+      "Description": "The African elephant is the largest land mammal, known for its large ears and tusks.",
+      "Category": "Mammal",
+      "Habitat": "Savannah, Forests",
+      "Image": "https://example.com/african_elephant.jpg"
+    },
+    {
+      "id": 2,
+      "Name": "Bald Eagle",
+      "Description": "The bald eagle is a bird of prey found in North America, known for its white head and strong beak.",
+      "Category": "Bird",
+      "Habitat": "Forests, Mountains",
+      "Image": "https://example.com/bald_eagle.jpg"
+    },
+    {
+      "id": 3,
+      "Name": "Great White Shark",
+      "Description": "The great white shark is one of the largest predatory fish, known for its powerful build and sharp teeth.",
+      "Category": "Fish",
+      "Habitat": "Oceans",
+      "Image": "https://example.com/great_white_shark.jpg"
+    },
+    {
+      "id": 4,
+      "Name": "Komodo Dragon",
+      "Description": "The Komodo dragon is the largest living species of lizard, known for its venomous bite.",
+      "Category": "Reptile",
+      "Habitat": "Tropical Forests, Savannas",
+      "Image": "https://example.com/komodo_dragon.jpg"
+    },
+    {
+      "id": 5,
+      "Name": "Emperor Penguin",
+      "Description": "The Emperor Penguin is the tallest and heaviest of all living penguin species, native to Antarctica.",
+      "Category": "Bird",
+      "Habitat": "Antarctic Ice",
+      "Image": "https://example.com/emperor_penguin.jpg"
+    },
+    {
+      "id": 6,
+      "Name": "Giant Panda",
+      "Description": "The giant panda is known for its distinctive black and white coat and its diet, which is primarily bamboo.",
+      "Category": "Mammal",
+      "Habitat": "Bamboo Forests",
+      "Image": "https://example.com/giant_panda.jpg"
+    },
+    {
+      "id": 7,
+      "Name": "Blue Whale",
+      "Description": "The blue whale is the largest animal ever known to have existed, with a heart the size of a car.",
+      "Category": "Mammal",
+      "Habitat": "Oceans",
+      "Image": "https://example.com/blue_whale.jpg"
+    },
+    {
+      "id": 8,
+      "Name": "Golden Poison Frog",
+      "Description": "The golden poison frog is one of the most poisonous animals in the world, native to rainforests in Colombia.",
+      "Category": "Amphibian",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/golden_poison_frog.jpg"
+    },
+    {
+      "id": 9,
+      "Name": "Arctic Fox",
+      "Description": "The Arctic fox is well adapted to living in cold environments and has thick fur to help it survive in the Arctic tundra.",
+      "Category": "Mammal",
+      "Habitat": "Arctic Tundra",
+      "Image": "https://example.com/arctic_fox.jpg"
+    },
+    {
+      "id": 10,
+      "Name": "King Cobra",
+      "Description": "The king cobra is the world's longest venomous snake, known for its impressive size and potent venom.",
+      "Category": "Reptile",
+      "Habitat": "Tropical Forests",
+      "Image": "https://example.com/king_cobra.jpg"
+    },
+    {
+      "id": 11,
+      "Name": "Snow Leopard",
+      "Description": "The snow leopard is a large cat native to the mountain ranges of Central and South Asia, known for its thick fur and elusive nature.",
+      "Category": "Mammal",
+      "Habitat": "Mountain Ranges",
+      "Image": "https://example.com/snow_leopard.jpg"
+    },
+    {
+      "id": 12,
+      "Name": "Red Kangaroo",
+      "Description": "The red kangaroo is the largest of all kangaroos, well-adapted to life in the arid and semi-arid center of Australia.",
+      "Category": "Mammal",
+      "Habitat": "Grasslands, Deserts",
+      "Image": "https://example.com/red_kangaroo.jpg"
+    },
+    {
+      "id": 13,
+      "Name": "Green Anaconda",
+      "Description": "The green anaconda is one of the largest snakes in the world, capable of constricting and swallowing large prey.",
+      "Category": "Reptile",
+      "Habitat": "Swamps, Marshes",
+      "Image": "https://example.com/green_anaconda.jpg"
+    },
+    {
+      "id": 14,
+      "Name": "Polar Bear",
+      "Description": "The polar bear is a large bear species native to the Arctic Circle, known for its white fur and dependence on sea ice.",
+      "Category": "Mammal",
+      "Habitat": "Arctic Ice, Tundra",
+      "Image": "https://example.com/polar_bear.jpg"
+    },
+    {
+      "id": 15,
+      "Name": "Atlantic Puffin",
+      "Description": "The Atlantic puffin is a seabird known for its colorful beak and ability to 'fly' underwater.",
+      "Category": "Bird",
+      "Habitat": "Coastal Cliffs, Islands",
+      "Image": "https://example.com/atlantic_puffin.jpg"
+    },
+    {
+      "id": 16,
+      "Name": "Cheetah",
+      "Description": "The cheetah is the fastest land animal, capable of reaching speeds up to 70 mph in short bursts.",
+      "Category": "Mammal",
+      "Habitat": "Savannah, Grasslands",
+      "Image": "https://example.com/cheetah.jpg"
+    },
+    {
+      "id": 17,
+      "Name": "Humpback Whale",
+      "Description": "The humpback whale is known for its spectacular breaching behavior and complex songs.",
+      "Category": "Mammal",
+      "Habitat": "Oceans",
+      "Image": "https://example.com/humpback_whale.jpg"
+    },
+    {
+      "id": 18,
+      "Name": "Tasmanian Devil",
+      "Description": "The Tasmanian devil is a carnivorous marsupial known for its ferocious temperament and powerful jaws.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Woodlands",
+      "Image": "https://example.com/tasmanian_devil.jpg"
+    },
+    {
+      "id": 19,
+      "Name": "Mandrill",
+      "Description": "The mandrill is the world's largest monkey, known for its bright blue and red face.",
+      "Category": "Mammal",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/mandrill.jpg"
+    },
+    {
+      "id": 20,
+      "Name": "Nile Crocodile",
+      "Description": "The Nile crocodile is one of the largest crocodilian species, known for its powerful bite and aggressive nature.",
+      "Category": "Reptile",
+      "Habitat": "Rivers, Lakes",
+      "Image": "https://example.com/nile_crocodile.jpg"
+    },
+    {
+      "id": 21,
+      "Name": "Blue Poison Dart Frog",
+      "Description": "The blue poison dart frog is a small, brightly colored amphibian native to South America, known for its toxic skin.",
+      "Category": "Amphibian",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/blue_poison_dart_frog.jpg"
+    },
+    {
+      "id": 22,
+      "Name": "Orangutan",
+      "Description": "Orangutans are great apes known for their intelligence, long arms, and reddish-brown hair.",
+      "Category": "Mammal",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/orangutan.jpg"
+    },
+    {
+      "id": 23,
+      "Name": "Galápagos Tortoise",
+      "Description": "The Galápagos tortoise is the largest living species of tortoise, known for its long lifespan.",
+      "Category": "Reptile",
+      "Habitat": "Galápagos Islands",
+      "Image": "https://example.com/galapagos_tortoise.jpg"
+    },
+    {
+      "id": 24,
+      "Name": "Golden Eagle",
+      "Description": "The golden eagle is one of the best-known birds of prey in the Northern Hemisphere, known for its powerful build.",
+      "Category": "Bird",
+      "Habitat": "Mountains, Forests",
+      "Image": "https://example.com/golden_eagle.jpg"
+    },
+    {
+      "id": 25,
+      "Name": "Axolotl",
+      "Description": "The axolotl is a unique amphibian native to Mexico, known for its ability to regenerate limbs.",
+      "Category": "Amphibian",
+      "Habitat": "Lakes, Canals",
+      "Image": "https://example.com/axolotl.jpg"
+    },
+    {
+      "id": 26,
+      "Name": "Snowy Owl",
+      "Description": "The snowy owl is a large, white owl native to the Arctic regions, known for its striking appearance and silent flight.",
+      "Category": "Bird",
+      "Habitat": "Arctic Tundra",
+      "Image": "https://example.com/snowy_owl.jpg"
+    },
+    {
+      "id": 27,
+      "Name": "Goliath Birdeater",
+      "Description": "The Goliath birdeater is the world's largest spider by mass, native to the rainforests of South America.",
+      "Category": "Arachnid",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/goliath_birdeater.jpg"
+    },
+    {
+      "id": 28,
+      "Name": "Meerkat",
+      "Description": "The meerkat is a small mammal belonging to the mongoose family, known for its social behavior and upright stance.",
+      "Category": "Mammal",
+      "Habitat": "Deserts, Grasslands",
+      "Image": "https://example.com/meerkat.jpg"
+    },
+    {
+      "id": 29,
+      "Name": "Grizzly Bear",
+      "Description": "The grizzly bear is a large subspecies of brown bear, known for its strength and presence in North American wilderness.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Mountains",
+      "Image": "https://example.com/grizzly_bear.jpg"
+    },
+    {
+      "id": 30,
+      "Name": "Leopard Gecko",
+      "Description": "The leopard gecko is a small, nocturnal reptile known for its spotted pattern and calm demeanor.",
+      "Category": "Reptile",
+      "Habitat": "Deserts, Scrublands",
+      "Image": "https://example.com/leopard_gecko.jpg"
+    },
+    {
+      "id": 31,
+      "Name": "Red Fox",
+      "Description": "The red fox is the largest of the true foxes, known for its adaptability and presence in various habitats.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Grasslands, Urban Areas",
+      "Image": "https://example.com/red_fox.jpg"
+    },
+    {
+      "id": 32,
+      "Name": "African Lion",
+      "Description": "The African lion is a large carnivorous feline, known for its social behavior and as a symbol of strength.",
+      "Category": "Mammal",
+      "Habitat": "Savannah, Grasslands",
+      "Image": "https://example.com/african_lion.jpg"
+    },
+    {
+      "id": 33,
+      "Name": "Golden Lion Tamarin",
+      "Description": "The golden lion tamarin is a small monkey known for its striking golden-orange fur.",
+      "Category": "Mammal",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/golden_lion_tamarin.jpg"
+    },
+    {
+      "id": 34,
+      "Name": "Saltwater Crocodile",
+      "Description": "The saltwater crocodile is the largest of all living reptiles, known for its aggressive nature.",
+      "Category": "Reptile",
+      "Habitat": "Rivers, Estuaries",
+      "Image": "https://example.com/saltwater_crocodile.jpg"
+    },
+    {
+      "id": 35,
+      "Name": "Giant Anteater",
+      "Description": "The giant anteater is a mammal native to Central and South America, known for its long snout and tongue.",
+      "Category": "Mammal",
+      "Habitat": "Grasslands, Rainforests",
+      "Image": "https://example.com/giant_anteater.jpg"
+    },
+    {
+      "id": 36,
+      "Name": "African Grey Parrot",
+      "Description": "The African grey parrot is known for its high intelligence and ability to mimic human speech.",
+      "Category": "Bird",
+      "Habitat": "Tropical Rainforests",
+      "Image": "https://example.com/african_grey_parrot.jpg"
+    },
+    {
+      "id": 37,
+      "Name": "Platypus",
+      "Description": "The platypus is a unique mammal known for its duck-bill, webbed feet, and laying eggs.",
+      "Category": "Mammal",
+      "Habitat": "Rivers, Lakes",
+      "Image": "https://example.com/platypus.jpg"
+    },
+    {
+      "id": 38,
+      "Name": "Indian Peacock",
+      "Description": "The Indian peacock is known for its iridescent tail feathers, which it fans out to attract a mate.",
+      "Category": "Bird",
+      "Habitat": "Forests, Farmlands",
+      "Image": "https://example.com/indian_peacock.jpg"
+    },
+    {
+      "id": 39,
+      "Name": "Common Wombat",
+      "Description": "The common wombat is a burrowing marsupial native to Australia, known for its stout body and burrowing habits.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Heathlands",
+      "Image": "https://example.com/common_wombat.jpg"
+    },
+    {
+      "id": 40,
+      "Name": "Gila Monster",
+      "Description": "The Gila monster is a venomous lizard native to the southwestern United States, known for its bead-like scales.",
+      "Category": "Reptile",
+      "Habitat": "Deserts, Scrublands",
+      "Image": "https://example.com/gila_monster.jpg"
+    },
+    {
+      "id": 41,
+      "Name": "Bengal Tiger",
+      "Description": "The Bengal tiger is a large feline native to the Indian subcontinent, known for its powerful build and distinctive stripes.",
+      "Category": "Mammal",
+      "Habitat": "Tropical Rainforests, Grasslands",
+      "Image": "https://example.com/bengal_tiger.jpg"
+    },
+    {
+      "id": 42,
+      "Name": "Quokka",
+      "Description": "The quokka is a small marsupial native to Australia, known for its friendly appearance and smile-like facial expression.",
+      "Category": "Mammal",
+      "Habitat": "Forest, Coastal Areas",
+      "Image": "https://example.com/quokka.jpg"
+    },
+    {
+      "id": 43,
+      "Name": "Caiman",
+      "Description": "Caimans are reptiles related to alligators and crocodiles, found primarily in Central and South America.",
+      "Category": "Reptile",
+      "Habitat": "Rivers, Wetlands",
+      "Image": "https://example.com/caiman.jpg"
+    },
+    {
+      "id": 44,
+      "Name": "Sloth Bear",
+      "Description": "The sloth bear is a nocturnal insectivorous bear native to the Indian subcontinent, known for its shaggy coat.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Grasslands",
+      "Image": "https://example.com/sloth_bear.jpg"
+    },
+    {
+      "id": 45,
+      "Name": "Hippopotamus",
+      "Description": "The hippopotamus is a large, mostly herbivorous mammal native to sub-Saharan Africa, known for its semi-aquatic lifestyle.",
+      "Category": "Mammal",
+      "Habitat": "Rivers, Lakes",
+      "Image": "https://example.com/hippopotamus.jpg"
+    },
+    {
+      "id": 46,
+      "Name": "Rattlesnake",
+      "Description": "Rattlesnakes are venomous snakes known for the rattling sound they make as a warning when threatened.",
+      "Category": "Reptile",
+      "Habitat": "Deserts, Grasslands",
+      "Image": "https://example.com/rattlesnake.jpg"
+    },
+    {
+      "id": 47,
+      "Name": "Scarlet Macaw",
+      "Description": "The scarlet macaw is a large, colorful parrot native to Central and South America, known for its bright red, yellow, and blue feathers.",
+      "Category": "Bird",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/scarlet_macaw.jpg"
+    },
+    {
+      "id": 48,
+      "Name": "Siberian Tiger",
+      "Description": "The Siberian tiger is the largest tiger subspecies, known for its thick fur and adaptations to cold climates.",
+      "Category": "Mammal",
+      "Habitat": "Forests, Mountains",
+      "Image": "https://example.com/siberian_tiger.jpg"
+    },
+    {
+      "id": 49,
+      "Name": "Red-Eyed Tree Frog",
+      "Description": "The red-eyed tree frog is known for its striking red eyes and vibrant green body, native to Central America.",
+      "Category": "Amphibian",
+      "Habitat": "Tropical Rainforest",
+      "Image": "https://example.com/red_eyed_tree_frog.jpg"
+    },
+    {
+      "id": 50,
+      "Name": "Giraffe",
+      "Description": "The giraffe is the tallest living terrestrial animal, known for its long neck and legs.",
+      "Category": "Mammal",
+      "Habitat": "Savannah, Woodlands",
+      "Image": "https://example.com/giraffe.jpg"
+    }
+  ]
+  

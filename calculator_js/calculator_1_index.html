@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator_1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+
+</head>
+<script>
+
+    function toggleCalculator() {
+        var calcBody = document.getElementById("calc_body");
+        var calcButton = document.getElementById("calc_button");
+        var tictactoefull = document.getElementById("tic-tac-toe_full");
+        var tictactoebutton = document.getElementById("tic-tac-toe_button");
+
+        // Hide Tic-Tac-Toe if it's visible
+        if (tictactoefull.style.display === "block") {
+            tictactoefull.style.display = "none";
+            tictactoebutton.style.backgroundColor = "";
+        }
+
+        // Toggle the calculator
+        if (calcBody.style.display === "none" || calcBody.style.display === "") {
+            calcBody.style.display = "block";
+            calcButton.style.backgroundColor = "rgba(236, 65, 13, 0.932)";
+        } else {
+            calcBody.style.display = "none";
+            calcButton.style.backgroundColor = "";
+        }
+    }
+
+    function toggleTictactoe() {
+        var tictactoefull = document.getElementById("tic-tac-toe_full");
+        var tictactoebutton = document.getElementById("tic-tac-toe_button");
+        var calcBody = document.getElementById("calc_body");
+        var calcButton = document.getElementById("calc_button");
+
+        // Hide the calculator if it's visible
+        if (calcBody.style.display === "block") {
+            calcBody.style.display = "none";
+            calcButton.style.backgroundColor = "";
+        }
+
+        // Toggle Tic-Tac-Toe
+        if (tictactoefull.style.display === "none" || tictactoefull.style.display === "") {
+            tictactoefull.style.display = "block";
+            tictactoebutton.style.backgroundColor = "rgba(236, 65, 13, 0.932)";
+        } else {
+            tictactoefull.style.display = "none";
+            tictactoebutton.style.backgroundColor = "";
+        }
+    }
+
+    let n1 = 0
+    let clearFlag = false
+    let oper = ""
+    let numberMemory = "0"
+
+    function clearInput() {
+        res.value = `0`
+        n1 = 0
+        n2 = 0
+        clearFlag = false
+        oper = ""
+        numberMemory = "0"
+    }
+
+    function digit(digit) {
+        if (clearFlag || res.value == '0') {
+            clearFlag = false
+            res.value = ""
+        }
+
+        if (res.value.length < 7) {
+            res.value += digit
+        }
+    }
+
+    function mathOper(op) {
+        n1 = parseFloat(res.value)
+        oper = op
+        clearFlag = true
+    }
+
+    function equal() {
+        n2 = parseFloat(res.value)
+
+        if (oper === "+") {
+            res.value = n1 + n2
+        } else if (oper === '-') {
+            res.value = n1 - n2
+        } else if (oper === "*") {
+            res.value = n1 * n2
+        } else if (oper === "÷") {
+            if (n2 === 0) {
+                res.value = "Error"
+            } else {
+                res.value = n1 / n2
+            }
+        } else {
+            res.value = "Error"
+        }
+
+        clearFlag = true
+        oper = ""
+    }
+
+    function clearMemory() {
+
+    }
+
+</script>
+
+<body>
+    <center>
+        <h1></h1>
+        <div id="upper_menu">
+            <button id="calc_button" onclick="toggleCalculator()">Calculator</button>
+            <button id="tic-tac-toe_button" onclick="toggleTictactoe()">Tic-Tac-Toe</button>
+        </div>
+        <br><br><br>
+        <div id="calc_body">
+            <input id="calculation">
+            <input id="calc_keyboard_back_numbers" value="88888888">
+            <input id="res">
+            <div id="calc_keyboard">
+                <button id="btn1" onclick="clearInput()">C</button>
+                <button id="btn1" onclick="clearMemory()">AC</button>
+                <button id="btn2">%</button>
+                <button id="btn2" onclick="mathOper(`*`)">X</button>
+                <button id="btn2" onclick="digit(7)">7</button>
+                <button id="btn2" onclick="digit(8)">8</button>
+                <button id="btn2" onclick="digit(9)">9</button>
+                <button id="btn2" onclick="mathOper(`÷`)">÷</button>
+                <button id="btn2" onclick="digit(4)">4</button>
+                <button id="btn2" onclick="digit(5)">5</button>
+                <button id="btn2" onclick="digit(6)">6</button>
+                <button id="btn2" onclick="mathOper(`-`)">-</button>
+                <button id="btn2" onclick="digit(1)">1</button>
+                <button id="btn2" onclick="digit(2)">2</button>
+                <button id="btn2" onclick="digit(3)">3</button>
+                <button id="btn_plus" onclick="mathOper(`+`)">+</button>
+                <button id="btn2">.</button>
+                <button id="btn2" onclick="digit(0)">0</button>
+                <button id="btn2" onclick="equal()">=</button>
+            </div>
+        </div>
+        <br>
+        <div id="tic-tac-toe_full">
+            <div id="tic-tac-toe_out">
+                <button id="tic-tac_back_left_top_corner"></button>
+                <button id="tic-tac_back"></button>
+                <button id="tic-tac_back_right_top_corner"></button>
+                <button id="tic-tac_back"></button>
+                <button id="tic-tac_back"></button>
+                <button id="tic-tac_back"></button>
+                <button id="tic-tac_back_left_low_corner"></button>
+                <button id="tic-tac_back"></button>
+                <button id="tic-tac_back_right_low_corner"></button>
+            </div>
+            <div id="tic-tac-toe_body">
+                <div id="tic-tac-toe_screen">
+                    <button id="tic-tac_left_top_corner"></button>
+                    <button id="tic-tac"></button>
+                    <button id="tic-tac_right_top_corner"></button>
+                    <button id="tic-tac"></button>
+                    <button id="tic-tac"></button>
+                    <button id="tic-tac"></button>
+                    <button id="tic-tac_left_low_corner"></button>
+                    <button id="tic-tac"></button>
+                    <button id="tic-tac_right_low_corner"></button>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+
+
+
+</html>

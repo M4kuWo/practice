@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exercises</title>
+</head>
+<script>
+    let serie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let serie2 = [1, 2, 3, 4, 5, 10, 22, 24, 26, 28, 30, 40, 400, 356]
+    // //Homework exercise 1
+    // function endToStart(array) {
+    //     for (let i = serie.length - 1; i >= 0; i--) {
+    //         console.log(serie[i]);
+    //     }
+    // };
+    // endToStart(serie)
+
+    // console.log("1 2 3");
+
+    // //Homework exercise 2
+    // function onlyEvens(array) {
+    //     for (let i = 0; i < serie.length; i++) {
+    //         if (serie[i] % 2 == 0) {
+    //             console.log(serie[i]);
+    //         }
+    //     }
+    // };
+    // onlyEvens(serie)
+
+    //Homework exercise 3
+    // let biggest = 0
+    // function printBiggest(array) {
+    //     if (condition) {
+
+    //     }
+    //     for (let i = 0; i < array.length; i++) {
+    //         const element = array[i];
+
+    //     }
+    // }
+
+    // //Homework exercise 4
+    // let sumSerie = 0
+    // function printBoolean(params) {
+
+    // }
+
+    // Class exercise 1
+    // function biggerTehanTen(array) {
+    //     let serie2New = array.filter(item => item > 10)
+
+    //     for (let i = 0; i < serie2New.length; i++) {
+    //         console.log(serie2New[i]);
+    //     }
+    // };
+    // biggerTehanTen(serie2)
+
+    // //Class exercise 2
+    // function SmallerThanEighteen(array) {
+    //     let serie2New = array.filter(item => item < 18)
+
+    //     for (let i = 0; i < serie2New.length; i++) {
+    //         console.log(serie2New[i]);
+    //     }};
+
+    //     SmallerThanEighteen(serie2)
+
+    //     //Class exercise 3
+    //     function tatata(array) {
+    //         let serie2New = array.filter(item => item % 3 == 0)
+
+    //         for (let i = 0; i < serie2New.length; i++) {
+    //             console.log(serie2New[i]);
+    //         }
+    //     };
+
+    //     tatata(serie2)
+
+    function printNumber(num) {
+        console.log(num);
+
+    }
+
+    function printNumUntil(num) {
+        for (let i = 0; i <= num; i++) {
+            console.log(i);
+        };
+    }
+
+    function printNumNew(params) {
+        for (let i = 0; i <= 20; i++) {
+            desc.value += ",";
+        }
+    }
+
+    function printName() {
+        name.value = "Mathias Kurin";
+
+    }
+
+    function printEmail() {
+        email.value = "kurinman@gmail.com";
+    };
+
+    function testdisplay() {
+        for (let i = 0; i < 10; i++) {
+            display.innerHTML += "<button>Mathias Kurin</button>";
+        }
+    }
+
+    function printDivNumbers() {
+        for (let i = 0; i <= 20; i++) {
+            display2.innerHTML += i + ", ";
+        }
+    }
+
+    function printTextBoxes() {
+        for (let i = 0; i < 10; i++) {
+            display3.innerHTML += '<input>';
+        }
+    }
+
+    function buttonColorChange() {
+        if (btn1.style.backgroundColor === "aquamarine") {
+            btn1.style.backgroundColor = "coral"; // New color
+        } else {
+            btn1.style.backgroundColor = "aquamarine"; // Original color
+        }
+    }
+
+
+    function buttonColorChange2() {
+        if (btnK.style.backgroundColor === "aquamarine") {
+            btnK.style.backgroundColor = "coral"; // New color
+        } else {
+            btnK.style.backgroundColor = "aquamarine"; // Original color
+        }
+    }
+
+    function divColorChange() {
+        originalColor = "rgb(143, 143, 233)"
+        if (display4.style.backgroundColor != "aquamarine") {
+            display4.style.backgroundColor = "aquamarine"; // New color
+        } else {
+            display4.style.backgroundColor = originalColor; // Original color
+        }
+    }
+
+    function buttonGone() {
+        btn3.style.display = "none";
+    }
+
+    function getRandomNumber() {
+        return Math.ceil(Math.random() * 255)
+    }
+
+    function changeColor() {
+    if (event.target.tagName == "BUTTON") {
+        event.target.style.backgroundColor = `rgb(${getRandomNumber()},${getRandomNumber()},${getRandomNumber()})`;
+    }
+    console.log("change color");
+}
+
+    // //Use setinterval to show an ascending number every second in the console
+    // let n1 = 0;
+    // function myCallback() {
+    //     console.log(n1); 
+    //     n1++;
+    // }
+    // setInterval(myCallback, 1000);
+
+    // Use setinterval to show an ascending number every second as divs
+    // let n1 = 0;
+    // function myCallback2() {
+    //     display5.innerHTML = n1; 
+    //     n1++;
+    // }
+    // setInterval(myCallback2, 1000);
+
+    //Show running time (clock)
+    function myCallback3() {
+        const currentTime = new Date();
+        const hours = currentTime.getHours().toString().padStart(2, '0');
+        const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+        const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+        display5.innerHTML = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(myCallback3, 1000);
+
+    function clearInput() {
+        res.value = `0`
+    }
+
+    function digit9() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `9`
+        }
+    }
+
+    function digit8() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `8`
+        }
+    }
+
+    function digit7() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `7`
+        }
+    }
+
+    function digit6() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `6`
+        }
+    }
+
+    function digit5() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `5`
+        }
+    }
+
+    function digit4() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `4`
+        }
+    }
+
+    function digit3() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `3`
+        }
+    }
+
+    function digit2() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `2`
+        }
+    }
+
+    function digit1() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+            res.value += `1`
+        }
+    }
+
+    function digit0() {
+        if (res.value == `0`) {
+            res.value = ""
+        }
+        if (res.value.length < 7) {
+
+            res.value += `0`
+        }
+    }
+
+
+
+</script>
+
+<body>
+    <h1><u>Class exercises</u></h1> <br><br>
+
+    <button onclick="printNumber(30)">Print Number 30</button><br><br>
+
+    <button onclick="printNumUntil(20)">Print from 0 to 20</button><br><br>
+
+    <label for="name"></label>
+    <input id="name">
+    <button onclick="printName()">Print name</button><br><br>
+
+    <label for="email"></label>
+    <input id="email">
+    <button onclick="printEmail()">Print email</button><br><br>
+
+
+    <button onclick="testdisplay()">Name x10</button><br><br>
+    <div id="display"></div>
+
+    <button onclick="printDivNumbers()">Numbers up to 20</button><br><br>
+    <div id="display2"></div>
+
+    <button onclick="printTextBoxes()">Text boxes</button><br><br>
+    <div id="display3"></div>
+
+    <button id="btn1" onclick="buttonColorChange()" , style="background-color: aquamarine;">Color
+        change</button><br><br>
+
+    <button id="btn2" onclick="divColorChange()" ;">Div color change</button><br><br>
+    <div id="display4" style="background-color: rgb(143, 143, 233); width: 50px; height: 50px"></div><br>
+
+
+    <button id="btn3" onclick="buttonGone()" ;">Button gone</button><br><br>
+
+    <div>
+        <h4>Current time</h4>
+    </div>
+    <div id="display5"></div><br>
+
+    <h4>Calculator</h4>
+    <input id="res" size="5px"><br>
+    <button>/</button><button>*</button><button>-</button><button>+</button><br>
+    <button onclick="digit7()">7</button><button onclick="digit8()">8</button><button
+        onclick="digit9()">9</button><button onclick="clearInput()">C</button><br>
+    <button onclick="digit4()">4</button><button onclick="digit5()">5</button><button
+        onclick="digit6()">6</button><button>CE</button><br>
+    <button onclick="digit1()">1</button><button onclick="digit2()">2</button><button
+        onclick="digit3()">3</button><button>T</button><br>
+    <button onclick="digit0()">0</button><button>.</button><button>enter</button>
+    <br><br><br>
+
+    <div onclick="changeColor()">
+        <button style="background-color: aquamarine;">K</button>
+        <button style="background-color: aquamarine;">A</button>
+        <button style="background-color: aquamarine;">W</button>
+        <button style="background-color: aquamarine;">A</button>
+        <button style="background-color: aquamarine;">B</button>
+        <button style="background-color: aquamarine;">A</button>
+        <button style="background-color: aquamarine;">N</button>
+        <button style="background-color: aquamarine;">G</button>
+        <button style="background-color: aquamarine;">A</button>
+        <button style="background-color: aquamarine;">!</button>
+    </div>
+    <br><br>
+
+
+</body>
+
+</html>

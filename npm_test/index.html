@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD System</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <style>
+        #students-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #students-list li {
+            margin: 5px 0;
+        }
+
+        input[type="text"] {
+            margin-right: 5px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student CRUD System</h1>
+    <ul id="students-list"></ul>
+
+    <h2>Add New Student</h2>
+    <input type="text" id="new-name" placeholder="Name">
+    <input type="text" id="new-email" placeholder="Email">
+    <button onclick="addStudent()">Add</button>
+
+    <h2>Update Student</h2>
+    <input type="number" id="update-id" placeholder="ID">
+    <input type="text" id="update-name" placeholder="New Name">
+    <input type="text" id="update-email" placeholder="New Email">
+    <button onclick="updateStudent()">Update</button>
+
+    <h2>Delete Student</h2>
+    <input type="number" id="delete-id" placeholder="ID">
+    <button onclick="deleteStudent()">Delete</button>
+
+    <script>
+        const SERVER = 'http://localhost:3000/students';
+
+        // Fetch and display students
+        const fetchStudents = () => {
+            console.log('Fetching students from:', SERVER);
+            axios.get(SERVER)
+                .then(response => {
+                    console.log('Response received:', response);
+                    const students = response.data.students;
+                    console.log('Parsed students:', students);
+
+                    if (students && Array.isArray(students)) {
+                        const studentsList = document.getElementById('students-list');
+                        studentsList.innerHTML = ''; // Clear the list
+
+                        students.forEach(student => {
+                            console.log('Adding student to list:', student);
+                            const li = document.createElement('li');
+                            li.innerHTML = `
+                                <span>${student.name} - ${student.email}</span>
+                                <button onclick="editStudent(${student.id})">Edit</button>
+                                <button onclick="deleteStudent(${student.id})">Delete</button>
+                            `;
+                            studentsList.appendChild(li);
+                        });
+                    } else {
+                        console.error('Students data is not an array or is undefined.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching the data:', error);
+                });
+        };
+
+        // Add a new student
+        const addStudent = () => {
+            const name = document.getElementById('new-name').value;
+            const email = document.getElementById('new-email').value;
+
+            console.log('Adding new student:', { name, email });
+
+            axios.post(SERVER, { name, email })
+                .then(response => {
+                    console.log('Student added successfully:', response);
+                    fetchStudents(); // Refresh the list
+                    document.getElementById('new-name').value = '';
+                    document.getElementById('new-email').value = '';
+                })
+                .catch(error => {
+                    console.error('Error adding the student:', error);
+                });
+        };
+
+        // Update an existing student
+        const updateStudent = () => {
+            const id = document.getElementById('update-id').value;
+            const newName = document.getElementById('update-name').value;
+            const newEmail = document.getElementById('update-email').value;
+
+            if (id && newName && newEmail) {
+                console.log('Updating student with ID:', id, 'New data:', { newName, newEmail });
+
+                // Prepare the data with explicit order
+                const data = {
+                    id: id,
+                    name: newName,
+                    email: newEmail
+                };
+
+                axios.put(`${SERVER}/${id}`, data)
+                    .then(response => {
+                        console.log('Student updated successfully:', response);
+                        fetchStudents(); // Refresh the list
+                        document.getElementById('update-id').value = '';
+                        document.getElementById('update-name').value = '';
+                        document.getElementById('update-email').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Error updating the student:', error);
+                    });
+            } else {
+                console.error('ID, new name, and new email are required for updating.');
+            }
+        };
+
+        // Delete a student
+        const deleteStudent = () => {
+            const id = document.getElementById('delete-id').value;
+
+            if (id) {
+                console.log('Deleting student with ID:', id);
+
+                axios.delete(`${SERVER}/${id}`)
+                    .then(response => {
+                        console.log('Student deleted successfully:', response);
+                        fetchStudents(); // Refresh the list
+                        document.getElementById('delete-id').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Error deleting the student:', error);
+                    });
+            } else {
+                console.error('ID is required for deletion.');
+            }
+        };
+
+        // Initial fetch of students
+        fetchStudents();
+    </script>
+</body>
+
+</html>
