@@ -55,7 +55,7 @@
     </div>
 
     <script>
-        const SERVER = 'http://localhost:3001/products';
+        const SERVER = 'http://localhost:3000/products';
 
         let cartList = []
 
@@ -82,7 +82,7 @@
         };
 
         const changeItemCartQuantity = (inputId, mathOper, itemId) => {
-            let currentQuantity = parseInt(inputId.value); 
+            let currentQuantity = parseInt(inputId.value);
 
             if (mathOper === '+') {
                 currentQuantity++;
@@ -91,7 +91,7 @@
             }
 
             inputId.value = currentQuantity; // Update the input field with the new quantity
-            
+
             if (currentQuantity === 0) {
                 removeItemFromCart(itemId);
             } else {
@@ -99,7 +99,7 @@
                 const existingItem = cartList.find(item => item.id === itemId);
                 if (existingItem) {
                     existingItem.quantity = currentQuantity;
-                } else {                 
+                } else {
                     cartList.push({ id: itemId, quantity: currentQuantity });
                 }
             }
@@ -119,35 +119,41 @@
         const filterByField = (field, value) => {
             axios.get(SERVER)
                 .then(response => {
-                    const filteredData = response.data.filter(item => item[field].toLowerCase().includes(value.toLowerCase()));
+                    const filteredData = response.data.filter(item => {
+                        // Convert the id to a number before filtering
+                        const itemId = parseInt(item.id, 10);
+                        return item[field].toLowerCase().includes(value.toLowerCase());
+                    });
                     const displayDiv = document.getElementById('display');
                     displayDiv.innerHTML = ''; // Clear previous results
                     console.log(filteredData);
-                    
+
                     // Wrap cards in a card group
                     displayDiv.innerHTML = '<div class="card-group"></div>';
                     const cardGroupDiv = displayDiv.querySelector('.card-group');
 
                     filteredData.forEach(item => {
-                        const itemQuantity = getCartItemQuantity(item.id); // Get the quantity from the cartList array
+                        // Convert the id to a number before using it
+                        const itemId = parseInt(item.id, 10);
+                        const itemQuantity = getCartItemQuantity(itemId); // Get the quantity from the cartList array
                         cardGroupDiv.innerHTML += `
-        <div class="card">
-    <br>
-    <img class="card-img-top" src="${item.image}" alt="${item.name} image">
-    <div class="card-body">
-        <center>
-        <h5 class="card-title">${item.name}</h5>
-        <h6 class="item-price">$${item.price}</h6>
-        <p class="card-text">${item.description}</p>
-        <div class="quantity-selector">
-            <button class="quantity-btn" onclick="changeItemCartQuantity(quantitySelector_${item.id},'-',${item.id})">-</button>
-            <input type="number" id="quantitySelector_${item.id}" value="${itemQuantity}" min="0">
-            <button class="quantity-btn" onclick="changeItemCartQuantity(quantitySelector_${item.id},'+',${item.id})">+</button>
-        </div>
-        </center>
-    </div>
-</div>
-`;
+                    <div class="card">
+                        <br>
+                        <img class="card-img-top" src="${item.image}" alt="${item.name} image">
+                        <div class="card-body">
+                            <center>
+                                <h5 class="card-title">${item.name}</h5>
+                                <h6 class="item-price">$${item.price}</h6>
+                                <p class="card-text">${item.description}</p>
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="changeItemCartQuantity(quantitySelector_${itemId},'-',${itemId})">-</button>
+                                    <input type="number" id="quantitySelector_${itemId}" value="${itemQuantity}" min="0">
+                                    <button class="quantity-btn" onclick="changeItemCartQuantity(quantitySelector_${itemId},'+',${itemId})">+</button>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                `;
                     });
                 })
                 .catch(error => console.error('Error:', error));

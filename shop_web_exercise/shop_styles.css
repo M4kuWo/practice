@@ -238,6 +238,7 @@ img {
     width: 50px;
     height: 44px;
     text-align: center;
+    pointer-events: none;
 }
 
 /* CSS to remove the arrows in the quantity selector */
