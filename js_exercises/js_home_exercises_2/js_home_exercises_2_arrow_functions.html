@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS Arrow Function Exercises</h1><br>
+        
+        <h2>Beginner Level</h2>
+        <h3>1. Convert to Arrow Functions:</h3>
+        <p>Convert the following regular functions to arrow functions:</p>
+        <pre><code class="javascript">
+function greet(name) {
+    return "Hello, " + name;
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+function square(x) {
+    return x * x;
+}
+        </code></pre><br>
+        
+        <h3>2. Simple Mapping:</h3>
+        <p>Given an array of numbers, use the map() function with an arrow function to create a new array that doubles each number:</p>
+        <pre><code class="javascript">
+const numbers = [1, 2, 3, 4, 5];
+        </code></pre><br>
+        
+        <h3>3. Filter Even Numbers:</h3>
+        <p>Use an arrow function with the filter() method to create an array of only even numbers from the following array:</p>
+        <pre><code class="javascript">
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        </code></pre><br>
+        
+        <h2>Intermediate Level</h2><br>
+        
+        <h3>4. Sort by Length:</h3>
+        <p>Use an arrow function to sort the following array of words by length:</p>
+        <pre><code class="javascript">
+const words = ["apple", "banana", "cherry", "date"];
+        </code></pre><br>
+        
+        <h3>5. Reduce to Sum:</h3>
+        <p>Use an arrow function to calculate the sum of the following array of numbers:</p>
+        <pre><code class="javascript">
+const numbers = [10, 20, 30, 40, 50];
+        </code></pre><br>
+        
+        <h3>6. Find Maximum:</h3>
+        <p>Use an arrow function to find the maximum number in the following array:</p>
+        <pre><code class="javascript">
+const numbers = [3, 8, 1, 10, 5];
+        </code></pre><br>
+        
+        <h2>Advanced Level</h2><br>
+        
+        <h3>7. Currying with Arrow Functions:</h3>
+        <p>Create a curried function that takes a number and returns another function that adds that number to another number:</p>
+        <pre><code class="javascript">
+// Example usage:
+// const add5 = add(5);
+// console.log(add5(3)); // Expected output: 8
+        </code></pre><br>
+        
+        <h3>8. Custom Sorting:</h3>
+        <p>Use an arrow function to sort the following array of user objects by age:</p>
+        <pre><code class="javascript">
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 20 },
+    { name: "Charlie", age: 30 }
+];
+        </code></pre><br>
+        
+        <h3>9. Complex Data Transformation:</h3>
+        <p>Use an arrow function to calculate the average score of users who have a score greater than a given threshold:</p>
+        <pre><code class="javascript">
+const users = [
+    { name: "Alice", score: 85 },
+    { name: "Bob", score: 75 },
+    { name: "Charlie", score: 90 },
+    { name: "David", score: 60 }
+];
+const threshold = 80;
+        </code></pre><br>
+    </div>
+</body>
+
+</html>

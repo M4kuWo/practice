@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js exercises 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <h1>Beginner Level</h1><br>
+    <div>
+        <input type="checkbox" id="exercise1" checked="checked" class="readonly-checkbox">
+        <label for="exercise1">
+            <h2>1. Basic Arithmetic Operations:</h2>
+            <p>Write a function that takes two numbers as arguments and returns their sum, difference, product, and quotient</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise2" checked="checked" class="readonly-checkbox">
+        <label for="exercise2">
+            <h2>2. String Manipulation:</h2>
+            <p>Create a function that takes a string and returns the string with the first letter of each word capitalized.</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise3" checked="checked" class="readonly-checkbox">
+        <label for="exercise3">
+            <h2>3. Array Operations:</h2>
+            <p>Write a function that takes an array of numbers and returns a new array with only the even numbers.</p>
+        </label>
+    </div>
+    <h1>Intermediate Level</h1><br>
+    <div>
+        <input type="checkbox" id="exercise4" checked="checked" class="readonly-checkbox">
+        <label for="exercise4">
+            <h2>4. Object Manipulation:</h2>
+            <p>Create a function that takes an array of objects, each containing name and age, and returns an array of names of those who are 18 or older</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise5" checked="checked" class="readonly-checkbox">
+        <label for="exercise5">
+            <h2>5. DOM Manipulation:</h2>
+            <p>Build a simple webpage with a button that, when clicked, changes the background color of the page to a random color</p>
+            <button id="btn1" onclick="changeBackColor()">
+                Change background color
+            </button>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise6" checked="checked" class="readonly-checkbox">
+        <label for="exercise6">
+            <h2>6. Event Handling:</h2>
+            <p>Create a form with a text input and a button. When the button is clicked, display the input text in a separate div below the form</p>
+            <div>
+                <input id="test" type="text">
+                <button id="btn2" onclick="printTextBelow()">Print text below</button>
+            </div>
+            <div id="placeHolderDivForText"></div>
+        </label>
+    </div>
+    <h1>Advanced Level</h1><br>
+    <div>
+        <input type="checkbox" id="exercise7" class="readonly-checkbox">
+        <label for="exercise7">
+            <h2>7. API Interaction:</h2>
+            <p>Using Axios or Fetch, write a function that retrieves data from a public API (e.g., a list of posts) and displays it on a webpage</p>
+            <button id="btn3" onclick="getDogs()">Get dog data</button>
+            <div id="placeHolderDivForText2"></div>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise8" class="readonly-checkbox">
+        <label for="exercise8">
+            <h2>8. Recursive Functions:</h2>
+            <p>Write a recursive function that calculates the factorial of a number</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise9" class="readonly-checkbox">
+        <label for="exercise9">
+            <h2>9. Simple CRUD Application:</h2>
+            <p>Build a basic CRUD system (Create, Read, Update, Delete) using a JSON-based API. Allow users to add, edit, delete, and view items on a list</p>
+        </label>
+    </div>
+    <h1>Expert Level</h1><br>
+    <div>
+        <input type="checkbox" id="exercise10" class="readonly-checkbox">
+        <label for="exercise10">
+            <h2>10. Custom Framework:</h2>
+            <p>Implement a simple version of a JavaScript framework. Create a basic component system where components can be rendered to the DOM, and allow for some form of state management</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise11" class="readonly-checkbox">
+        <label for="exercise11">
+            <h2>11. Webpage with Authentication:</h2>
+            <p>Build a webpage that includes a login system. Use JavaScript to validate user credentials (stored in a JSON object) and display different content based on whether the user is logged in</p>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="exercise12" class="readonly-checkbox">
+        <label for="exercise12">
+            <h2>12. Performance Optimization:</h2>
+            <p>Analyze a webpage with complex DOM manipulations and refactor the code to improve performance (e.g., reducing reflows/repaints, optimizing loops).</p>
+        </label>
+    </div>
+    <script>
+        // Chat GPT exercises to test understanding of JS
+
+        // Give two numbers and return their sum, difference and quotient
+        function mathThingy(n1, n2) {
+            // Sum
+            let resSum = n1 + n2
+            console.log("Sum-> " + resSum);
+            // Subtraction
+            let resDifN1 = n1 - n2
+            let resDifN2 = n2 - n1
+            let resDif = 0
+            if (n1 > n2) {
+                console.log("Difference-> " + resDifN1);
+                resDif = resDifN1
+            } else {
+                console.log("Difference-> " + resDifN2);
+                resDif = resDifN2
+            }
+            // Division
+            let resQuot = n1 / n2
+            if (n2 != 0) {
+                console.log("Quotient-> " + resQuot);
+            } else {
+                console.log("Can't divide by 0");
+                resQuot = null
+            }
+            return resSum, resDif, resQuot
+        }
+        mathThingy(6, 7)
+
+        // Give a string and return a new one with the first letter of each word in upper case
+        function firstLetterCapital(sentence) {
+            let words = sentence.split(" ")
+
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+            }
+            let newSentence = words.join(" ")
+            console.log(newSentence);
+            return newSentence
+        }
+        // example
+        firstLetterCapital("is this even working?")
+
+        // Give an array and return a new array with only the even numbers of the original array
+        function returnEvenArray(array) {
+            let newArray = []; // Initialize newArray as an empty array
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    newArray.push(array[i]); // Add even numbers to newArray
+                }
+            }
+            console.log(newArray);
+            return newArray; // Return the new array with even numbers
+        }
+        // example
+        returnEvenArray([1, 3, 6, 87, 234, 10, 16, 21])
+
+        // Build a simple webpage with a button that, when clicked, changes the background color of the page to a random color
+        function changeBackColor() {
+            function getRandomInt() {
+                let min = Math.ceil(0);   // Declare min
+                let max = Math.floor(255);  // Declare max
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            let randomColor = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`;
+
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // Create a form with a text input and a button. When the button is clicked, display the input text in a separate div below the form
+        function printTextBelow() {
+            let givenText = document.getElementById("test").value; // Added document.getElementById for input value
+            document.getElementById("placeHolderDivForText").innerHTML = "";
+            document.getElementById("placeHolderDivForText").innerHTML = "<br>" + givenText;
+        }
+
+        // Using Axios or Fetch, write a function that retrieves data from a public API (e.g., a list of posts) and displays it on a webpage
+        const SERVER = 'https://dog.ceo/api/breeds/list/all';
+
+        function getDogs() {
+            axios.get(SERVER)
+                .then(function (response) {
+                    document.getElementById("placeHolderDivForText2").innerHTML = "";
+                    document.getElementById("placeHolderDivForText2").innerHTML = JSON.stringify(response.data, null, 2);
+                })
+                .catch(function (error) {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Write a recursive function that calculates the factorial of a number
+
+        // Build a basic CRUD system (Create, Read, Update, Delete) using a JSON-based API. Allow users to add, edit, delete, and view items on a list
+    </script>
+</body>
+
+</html>

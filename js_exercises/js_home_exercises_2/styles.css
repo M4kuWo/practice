@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background for body */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 90%; /* Adjust the width as needed */
+    max-width: 1200px; /* Maximum width to prevent it from becoming too wide */
+    margin: 20px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Slightly lighter dark background for the content container */
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #e0e0e0; /* Light color for headers */
+    text-align: center; /* Center align headers */
+    padding: 10px; /* Padding for background */
+    margin: 0 0 20px; /* Add margin to bottom of headers */
+    background-color: rgba(50, 50, 50, 0.7); /* Semi-transparent dark background */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+p {
+    text-align: center; /* Center align paragraphs */
+    margin: 0 0 20px; /* Add margin to bottom of paragraphs */
+}
+
+pre {
+    background: #1e1e1e; /* Dark background for code blocks */
+    color: #d4d4d4; /* Light color for code text */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Maximum width for code blocks */
+    margin: 0 auto; /* Centering code blocks */
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    text-align: center; /* Center align paragraphs */
+    margin: 10px 0;
+}
+
+a {
+    color: #1e90ff; /* Bright color for links */
+}
+
+.exercise {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.exercise input[type="checkbox"] {
+    margin-right: 10px;
+    pointer-events: none;
+
+}
+
+.exercise label {
+    cursor: default;
+}
+
+.readonly-checkbox {
+    pointer-events: none; /* Prevents clicking */
+    opacity: 0.6; /* Optional: to visually indicate that it's read-only */
+}
