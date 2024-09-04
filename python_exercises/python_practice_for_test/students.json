@@ -1,0 +1,32 @@
+[
+    {
+        "StudentID": 1,
+        "Name": "Mathias Kurin",
+        "Email": "kurinman@gmail.com",
+        "Hidden": 0
+    },
+    {
+        "StudentID": 2,
+        "Name": "tuvieja",
+        "Email": "tuvieja@gmail.com",
+        "Hidden": 0
+    },
+    {
+        "StudentID": 3,
+        "Name": "vamo",
+        "Email": "vamoarriba@gmail.com",
+        "Hidden": 1
+    },
+    {
+        "StudentID": 4,
+        "Name": "carajo",
+        "Email": "carajo@gmail.com",
+        "Hidden": 0
+    },
+    {
+        "StudentID": 5,
+        "Name": "ultima",
+        "Email": "ultima@gmail.com",
+        "Hidden": 0
+    }
+]
