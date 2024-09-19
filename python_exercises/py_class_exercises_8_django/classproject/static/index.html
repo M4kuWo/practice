@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Unchained</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>API Demo</h1>
+
+    <h2>Fetch Data</h2>
+    <button onclick="fetchData('creatures')">Fetch Creatures</button>
+    <button onclick="fetchData('superheroes')">Fetch Superheroes</button>
+
+    <h2>Create Entry</h2>
+    <div id="create-form">
+        <select id="create-type">
+            <option value="creatures">Creature</option>
+            <option value="superheroes">Superhero</option>
+        </select>
+        <input type="text" id="create-name" placeholder="Name" required>
+        <input type="text" id="create-detail" placeholder="Detail" required>
+        <button onclick="createEntry()">Create</button>
+    </div>
+
+    <h2>Update Entry</h2>
+    <div id="update-form">
+        <select id="update-type">
+            <option value="creatures">Creature</option>
+            <option value="superheroes">Superhero</option>
+        </select>
+        <input type="number" id="update-id" placeholder="ID" required>
+        <input type="text" id="update-name" placeholder="New Name" required>
+        <input type="text" id="update-detail" placeholder="New Detail" required>
+        <button onclick="updateEntry()">Update</button>
+    </div>
+
+    <h2>Delete Entry</h2>
+    <div id="delete-form">
+        <select id="delete-type">
+            <option value="creatures">Creature</option>
+            <option value="superheroes">Superhero</option>
+        </select>
+        <input type="number" id="delete-id" placeholder="ID" required>
+        <button onclick="deleteEntry()">Delete</button>
+    </div>
+
+    <pre id="output"></pre>
+
+    <script>
+        const SERVER = 'http://127.0.0.1:8000/api/';
+
+        // Fetch data
+        function fetchData(endpoint) {
+            axios.get(`${SERVER}${endpoint}/`)
+                .then(response => {
+                    document.getElementById('output').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Create entry
+        function createEntry() {
+            const type = document.getElementById('create-type').value;
+            const name = document.getElementById('create-name').value;
+            const detail = document.getElementById('create-detail').value;
+            
+            const data = type === 'creatures' ? 
+                { creaturename: name, originname: detail } :
+                { heroname: name, realname: detail, medium: 'movies' }; // Example medium for superheroes
+            
+            axios.post(`${SERVER}${type}/`, data)
+                .then(response => {
+                    document.getElementById('output').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error creating entry:', error);
+                });
+        }
+
+        // Update entry
+        function updateEntry() {
+            const type = document.getElementById('update-type').value;
+            const id = document.getElementById('update-id').value;
+            const name = document.getElementById('update-name').value;
+            const detail = document.getElementById('update-detail').value;
+            
+            const data = type === 'creatures' ? 
+                { creaturename: name, originname: detail } :
+                { heroname: name, realname: detail, medium: 'movies' }; // Example medium for superheroes
+            
+            axios.put(`${SERVER}${type}/${id}/`, data)
+                .then(response => {
+                    document.getElementById('output').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error updating entry:', error);
+                });
+        }
+
+        // Delete entry
+        function deleteEntry() {
+            const type = document.getElementById('delete-type').value;
+            const id = document.getElementById('delete-id').value;
+
+            axios.delete(`${SERVER}${type}/${id}/`)
+                .then(response => {
+                    document.getElementById('output').textContent = 'Entry deleted successfully';
+                })
+                .catch(error => {
+                    console.error('Error deleting entry:', error);
+                });
+        }
+    </script>
+</body>
+</html>

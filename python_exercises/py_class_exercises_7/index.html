@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class exercises 7</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <center>
+        <br>
+        <button onclick="showToast_1()">test 1</button><br><br>
+        <button onclick="showToast_2()">test 2</button>
+    </center>
+
+    <script>
+        // Define the first toast function
+        function showToast_1() {
+            Toastify({
+                text: "This is a toast",
+                className: "info",
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                }
+            }).showToast();
+        }
+
+        // Define the second toast function
+        function showToast_2() {
+            Toastify({
+                text: "This is also a toast",
+                className: "info",
+                style: {
+                    background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                }
+            }).showToast();
+        }
+    </script>
+
+</body>
+</html>

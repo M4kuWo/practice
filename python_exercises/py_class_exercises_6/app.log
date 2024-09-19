@@ -1,0 +1,21 @@
+2024-09-12 09:56:23 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-12 09:56:23 INFO: [33mPress CTRL+C to quit[0m
+2024-09-12 09:56:23 INFO:  * Restarting with stat
+2024-09-12 09:56:24 WARNING:  * Debugger is active!
+2024-09-12 09:56:24 INFO:  * Debugger PIN: 565-763-922
+2024-09-12 09:59:05 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-12 09:59:05 INFO: [33mPress CTRL+C to quit[0m
+2024-09-12 09:59:05 INFO:  * Restarting with stat
+2024-09-12 09:59:05 WARNING:  * Debugger is active!
+2024-09-12 09:59:06 INFO:  * Debugger PIN: 900-362-922
+2024-09-12 10:01:19 DEBUG: Home page accessed
+2024-09-12 10:01:40 DEBUG: Home page accessed
+2024-09-12 10:01:43 DEBUG: Home page accessed
+2024-09-12 10:02:11 DEBUG: Home page accessed
+2024-09-12 10:02:13 DEBUG: Home page accessed
+2024-09-12 10:02:18 DEBUG: Home page accessed
+2024-09-12 10:02:19 DEBUG: Home page accessed
+2024-09-12 10:02:26 DEBUG: Home page accessed
+2024-09-12 10:02:26 DEBUG: Home page accessed

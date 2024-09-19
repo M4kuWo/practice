@@ -1,0 +1,6 @@
+2024-09-12 09:41:25 WARNING:  * Debugger is active!
+2024-09-12 09:41:25 INFO:  * Debugger PIN: 565-763-922
+2024-09-12 09:42:04 INFO: Received GET request at /videogames
+2024-09-12 09:42:04 INFO: 127.0.0.1 - - [12/Sep/2024 09:42:04] "GET /videogames HTTP/1.1" 200 -
+2024-09-12 09:42:53 INFO: Received POST request at /videogames
+2024-09-12 09:42:53 INFO: 127.0.0.1 - - [12/Sep/2024 09:42:53] "[35m[1mPOST /videogames HTTP/1.1[0m" 201 -

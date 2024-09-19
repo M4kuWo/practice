@@ -1,0 +1,5 @@
+# Ignore the py_web_deploy_test directory
+python_exercises/py_web_deploy_test/
+
+# Ignore the py_web_deploy_test_front directory
+python_exercises/py_web_deploy_test_front/
