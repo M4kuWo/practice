@@ -1,0 +1,8 @@
+2024-11-19 13:16:51,775 - INFO - Calling function 'division' with arguments: (12, 3, 2)
+2024-11-19 13:16:51,777 - INFO - Function 'division' returned: 2.0
+2024-11-19 13:16:51,777 - INFO - Calling function 'multiplication' with arguments: (2, 3, 4)
+2024-11-19 13:16:51,778 - INFO - Function 'multiplication' returned: 24
+2024-11-19 13:16:51,778 - INFO - Calling function 'addition' with arguments: (5, 7, 2)
+2024-11-19 13:16:51,778 - INFO - Function 'addition' returned: 14
+2024-11-19 13:30:24,713 - INFO - Calling function 'division' with arguments: (12, 3, 0)
+2024-11-19 13:30:24,713 - ERROR - An error occurred: Division by zero is not allowed.

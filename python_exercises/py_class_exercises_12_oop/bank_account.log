@@ -1,0 +1,4 @@
+2024-11-19 12:36:03,509 - INFO - Account created for Jane Doe with initial balance: 100
+2024-11-19 12:36:03,510 - INFO - Jane Doe deposited 50. New balance: 150
+2024-11-19 12:36:03,510 - INFO - Jane Doe withdrew 30. New balance: 120
+2024-11-19 12:36:03,510 - INFO - Jane Doe's balance checked: 120
